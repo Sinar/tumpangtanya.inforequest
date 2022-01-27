@@ -24,8 +24,9 @@ class InfoRequestFailed(object):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(u"sony-a7r-iii", _(u"Sony Aplha 7R III")),
-            VocabItem(u"canon-5d-iv", _(u"Canon 5D IV")),
+            VocabItem(u"noresponse", _(u"No Response / Unreachable")),
+            VocabItem(u"notresponsible", _(u"Agency Not Responsible")),
+            VocabItem(u"denied", _(u"Request Denied")),
         ]
 
         # Fix context if you are using the vocabulary in DataGridField.

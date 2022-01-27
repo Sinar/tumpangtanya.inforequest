@@ -1,21 +1,35 @@
 # -*- coding: utf-8 -*-
 # from plone.app.textfield import RichText
-# from plone.autoform import directives
+from plone.autoform import directives
 from plone.dexterity.content import Container
+from plone.app.z3cform.widget import RelatedItemsFieldWidget, SelectFieldWidget
 
 # from plone.namedfile import field as namedfile
 from plone.supermodel import model
 
 # from plone.supermodel.directives import fieldset
 # from z3c.form.browser.radio import RadioFieldWidget
-# from zope import schema
+from zope import schema
 from zope.interface import implementer
 
-# from tumpangtanya.inforequest import _
+from tumpangtanya.inforequest import _
 
 
 class IFailedInfoRequest(model.Schema):
     """Marker interface and Dexterity Python Schema for FailedInfoRequest"""
+
+    # request method
+    directives.widget(request_failed_type=SelectFieldWidget)
+    request_failed_type = schema.Choice(
+        title=_(u"Reason for failure"),
+        description=_(
+            u"""
+        Why did information request failed
+        """
+        ),
+        required=False,
+        vocabulary="tumpangtanya.inforequest.InfoRequestFailed",
+    )
 
     # If you want, you can load a xml model created TTW here
     # and customize it in Python:
