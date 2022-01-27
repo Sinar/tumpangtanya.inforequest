@@ -19,6 +19,29 @@ class IInfoRequest(model.Schema):
     """Marker interface and Dexterity Python Schema for InfoRequest"""
 
     # request method
+    directives.widget(request_type=SelectFieldWidget)
+    request_type = schema.Choice(
+        title=_(u"Request Type"),
+        description=_(
+            u"""
+        How the request was made
+        """
+        ),
+        required=False,
+        vocabulary="tumpangtanya.inforequest.RequestMethod",
+    )
+
+    # request notes
+    request_note = schema.Text(
+        title=_(u"Details"),
+        description=_(
+            u"""
+            Notes on how it was submitted such as phone nunmber, email
+            address or url of website.
+            """
+        ),
+        required=False,
+    )
 
     # submission date
     submission_date = schema.Date(
@@ -27,7 +50,6 @@ class IInfoRequest(model.Schema):
     )
 
     # government agency
-
     directives.widget(interest_type=SelectFieldWidget)
     interest_type = schema.Choice(
         title=_(u"Government Agency"),

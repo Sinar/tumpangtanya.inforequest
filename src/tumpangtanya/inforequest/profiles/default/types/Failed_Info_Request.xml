@@ -1,38 +1,37 @@
 <?xml version="1.0"?>
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-    name="Info Request"
+    name="Failed Info Request"
     meta_type="Dexterity FTI"
     i18n:domain="tumpangtanya.inforequest">
 
   <!-- Basic properties -->
   <property
       i18n:translate=""
-      name="title">Info Request</property>
+      name="title">Failed Info Request</property>
   <property
       i18n:translate=""
-      name="description">General government information request</property>
+      name="description">Failed Info Request</property>
 
   <property name="allow_discussion">False</property>
-  <property name="factory">Info Request</property>
+  <property name="factory">Failed Info Request</property>
   <property name="icon_expr"></property>
   <property name="link_target"></property>
 
   <!-- Hierarchy control -->
-  <property name="global_allow">True</property>
+  <property name="global_allow">False</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
-    <element value="Failed Info Request" />
-      <!--
+  <!--
     <element value="Document" />
     <element value="File" />
   -->
   </property>
   <!-- Schema, class and security -->
-  <property name="add_permission">tumpangtanya.inforequest.AddInfoRequest</property>
-  <property name="klass">tumpangtanya.inforequest.content.info_request.InfoRequest</property>
+  <property name="add_permission">tumpangtanya.inforequest.AddFailedInfoRequest</property>
+  <property name="klass">tumpangtanya.inforequest.content.failed_info_request.FailedInfoRequest</property>
   <property name="model_file"></property>
   <property name="model_source"></property>
-  <property name="schema">tumpangtanya.inforequest.content.info_request.IInfoRequest</property>
+  <property name="schema">tumpangtanya.inforequest.content.failed_info_request.IFailedInfoRequest</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">
@@ -61,7 +60,7 @@
   </property>
 
   <!-- View information -->
-  <property name="add_view_expr">string:${folder_url}/++add++Info Request</property>
+  <property name="add_view_expr">string:${folder_url}/++add++Failed Info Request</property>
   <property name="default_view">view</property>
   <property name="default_view_fallback">False</property>
   <property name="immediate_view">view</property>
