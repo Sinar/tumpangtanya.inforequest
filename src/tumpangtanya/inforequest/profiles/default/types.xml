@@ -4,4 +4,5 @@
   <!--<object name="example_ct" meta_type="Dexterity FTI"/>-->
   <object name="Info Request" meta_type="Dexterity FTI"/>
   <object name="Failed Info Request" meta_type="Dexterity FTI"/>
+  <object name="Successful Info Request" meta_type="Dexterity FTI"/>
 </object>

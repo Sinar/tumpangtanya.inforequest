@@ -7,6 +7,12 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <permission
+        id="tumpangtanya.inforequest.AddSuccessfulInfoRequest"
+        title="tumpangtanya.inforequest: Add SuccessfulInfoRequest"
+    />
+
+
+    <permission
         id="tumpangtanya.inforequest.AddFailedInfoRequest"
         title="tumpangtanya.inforequest: Add FailedInfoRequest"
     />
