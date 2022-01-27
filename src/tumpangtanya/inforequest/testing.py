@@ -2,10 +2,10 @@
 from plone.app.contenttypes.testing import PLONE_APP_CONTENTTYPES_FIXTURE
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import (
-    applyProfile,
     FunctionalTesting,
     IntegrationTesting,
     PloneSandboxLayer,
+    applyProfile,
 )
 from plone.testing import z2
 
@@ -21,11 +21,12 @@ class TumpangtanyaInforequestLayer(PloneSandboxLayer):
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
         import plone.restapi
+
         self.loadZCML(package=plone.restapi)
         self.loadZCML(package=tumpangtanya.inforequest)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'tumpangtanya.inforequest:default')
+        applyProfile(portal, "tumpangtanya.inforequest:default")
 
 
 TUMPANGTANYA_INFOREQUEST_FIXTURE = TumpangtanyaInforequestLayer()
@@ -33,13 +34,13 @@ TUMPANGTANYA_INFOREQUEST_FIXTURE = TumpangtanyaInforequestLayer()
 
 TUMPANGTANYA_INFOREQUEST_INTEGRATION_TESTING = IntegrationTesting(
     bases=(TUMPANGTANYA_INFOREQUEST_FIXTURE,),
-    name='TumpangtanyaInforequestLayer:IntegrationTesting',
+    name="TumpangtanyaInforequestLayer:IntegrationTesting",
 )
 
 
 TUMPANGTANYA_INFOREQUEST_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(TUMPANGTANYA_INFOREQUEST_FIXTURE,),
-    name='TumpangtanyaInforequestLayer:FunctionalTesting',
+    name="TumpangtanyaInforequestLayer:FunctionalTesting",
 )
 
 
@@ -49,5 +50,5 @@ TUMPANGTANYA_INFOREQUEST_ACCEPTANCE_TESTING = FunctionalTesting(
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='TumpangtanyaInforequestLayer:AcceptanceTesting',
+    name="TumpangtanyaInforequestLayer:AcceptanceTesting",
 )
