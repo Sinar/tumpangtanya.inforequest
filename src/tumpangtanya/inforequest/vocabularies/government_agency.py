@@ -24,9 +24,10 @@ class GovernmentAgency(object):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(u"sony-a7r-iii", _(u"Sony Aplha 7R III")),
-            VocabItem(u"canon-5d-iv", _(u"Canon 5D IV")),
+            VocabItem(u"ptg-sg", _(u"Pejabat Tanah dan Galian, Selangor")),
+            VocabItem(u"ptg-pg", _(u"Pejabat Tanah dan Galian, Penang")),
         ]
+        
 
         # Fix context if you are using the vocabulary in DataGridField.
         # See https://github.com/collective/collective.z3cform.datagridfield/issues/31:  # NOQA: 501
