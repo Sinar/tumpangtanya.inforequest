@@ -18,12 +18,11 @@ class IResponseDateMarker(Interface):
 class IResponseDate(model.Schema):
     """ """
 
-    project = schema.TextLine(
-        title=_(u"Project"),
-        description=_(u"Give in a project name"),
+    # response date
+    response_date= schema.Date(
+        title=_(u"Date when requests responded to by government agency"),
         required=False,
     )
-
 
 @implementer(IResponseDate)
 @adapter(IResponseDateMarker)
@@ -32,11 +31,11 @@ class ResponseDate(object):
         self.context = context
 
     @property
-    def project(self):
-        if safe_hasattr(self.context, "project"):
-            return self.context.project
+    def response_date(self):
+        if safe_hasattr(self.context, "response_date"):
+            return self.context.response_date
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @response_date.setter
+    def response_date(self, value):
+        self.context.response_date = value
