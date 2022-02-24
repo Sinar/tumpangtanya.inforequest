@@ -23,7 +23,7 @@ class ISubmissionDate(model.Schema):
         title=_(u"Date when request submitted"),
         required=False,
     )
-    
+
 
 @implementer(ISubmissionDate)
 @adapter(ISubmissionDateMarker)

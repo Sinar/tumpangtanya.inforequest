@@ -10,6 +10,16 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        name="tumpangtanya.inforequest.response_date"
+        title="ResponseDate"
+        description="Response Date of Request by Government Agency"
+        provides=".response_date.IResponseDate"
+        factory=".response_date.ResponseDate"
+        marker=".response_date.IResponseDateMarker"
+        />
+
+
+    <plone:behavior
         name="tumpangtanya.inforequest.submission_date"
         title="SubmissionDate"
         description="Date for information request submission"
