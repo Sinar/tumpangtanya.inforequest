@@ -7,7 +7,7 @@
   <!-- Basic properties -->
   <property
       i18n:translate=""
-      name="title">info request</property>
+      name="title">Info Request</property>
   <property
       i18n:translate=""
       name="description">Information Requests</property>

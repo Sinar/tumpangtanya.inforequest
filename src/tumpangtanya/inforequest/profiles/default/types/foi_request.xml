@@ -7,7 +7,7 @@
   <!-- Basic properties -->
   <property
       i18n:translate=""
-      name="title">foi request</property>
+      name="title">FOI Request</property>
   <property
       i18n:translate=""
       name="description">FOI Request</property>
