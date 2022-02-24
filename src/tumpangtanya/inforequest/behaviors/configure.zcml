@@ -10,6 +10,16 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        name="tumpangtanya.inforequest.submission_date"
+        title="SubmissionDate"
+        description="Date for information request submission"
+        provides=".submission_date.ISubmissionDate"
+        factory=".submission_date.SubmissionDate"
+        marker=".submission_date.ISubmissionDateMarker"
+        />
+
+
+    <plone:behavior
         name="tumpangtanya.inforequest.government_agency"
         title="GovernmentAgency"
         description="Government Agency request as made to"
