@@ -5,6 +5,12 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <utility
+        component=".government_agency.GovernmentAgencyFactory"
+        name="tumpangtanya.inforequest.GovernmentAgency"
+    />
+
+
+    <utility
         component=".request_method.RequestMethodFactory"
         name="tumpangtanya.inforequest.RequestMethod"
     />

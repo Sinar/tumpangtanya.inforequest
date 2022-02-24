@@ -17,18 +17,15 @@ class VocabItem(object):
 
 
 @implementer(IVocabularyFactory)
-class RequestMethod(object):
+class GovernmentAgency(object):
     """ """
 
     def __call__(self, context):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(u"email", _(u"Email")),
-            VocabItem(u"online", _(u"Online Form")),
-            VocabItem(u"phone", _(u"Phone")),
-            VocabItem(u"mail", _(u"Postal Mail")),
-            VocabItem(u"inperson", _(u"In Person")),
+            VocabItem(u"sony-a7r-iii", _(u"Sony Aplha 7R III")),
+            VocabItem(u"canon-5d-iv", _(u"Canon 5D IV")),
         ]
 
         # Fix context if you are using the vocabulary in DataGridField.
@@ -51,4 +48,4 @@ class RequestMethod(object):
         return SimpleVocabulary(terms)
 
 
-RequestMethodFactory = RequestMethod()
+GovernmentAgencyFactory = GovernmentAgency()
