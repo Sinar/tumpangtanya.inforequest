@@ -27,7 +27,6 @@ class GovernmentAgency(object):
             VocabItem(u"ptg-sg", _(u"Pejabat Tanah dan Galian, Selangor")),
             VocabItem(u"ptg-pg", _(u"Pejabat Tanah dan Galian, Penang")),
         ]
-        
 
         # Fix context if you are using the vocabulary in DataGridField.
         # See https://github.com/collective/collective.z3cform.datagridfield/issues/31:  # NOQA: 501
