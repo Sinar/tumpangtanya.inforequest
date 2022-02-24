@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="tumpangtanya.inforequest">
+
+    <!-- -*- extra stuff goes here -*- -->
+
+    <utility
+        component=".request_method.RequestMethodFactory"
+        name="tumpangtanya.inforequest.RequestMethod"
+    />
+
+
+</configure>
