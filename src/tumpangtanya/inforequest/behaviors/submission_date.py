@@ -18,12 +18,12 @@ class ISubmissionDateMarker(Interface):
 class ISubmissionDate(model.Schema):
     """ """
 
-    project = schema.TextLine(
-        title=_(u"Project"),
-        description=_(u"Give in a project name"),
+    # submission date
+    submission_date = schema.Date(
+        title=_(u"Date when request submitted"),
         required=False,
     )
-
+    
 
 @implementer(ISubmissionDate)
 @adapter(ISubmissionDateMarker)
@@ -32,11 +32,11 @@ class SubmissionDate(object):
         self.context = context
 
     @property
-    def project(self):
-        if safe_hasattr(self.context, "project"):
-            return self.context.project
+    def submission_date(self):
+        if safe_hasattr(self.context, "submission_date"):
+            return self.context.submission_date
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @submission_date.setter
+    def submission_date(self, value):
+        self.context.submission_date = value
