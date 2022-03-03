@@ -19,10 +19,11 @@ class IResponseDate(model.Schema):
     """ """
 
     # response date
-    response_date= schema.Date(
+    response_date = schema.Date(
         title=_(u"Date when requests responded to by government agency"),
         required=False,
     )
+
 
 @implementer(IResponseDate)
 @adapter(IResponseDateMarker)

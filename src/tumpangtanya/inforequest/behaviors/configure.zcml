@@ -10,6 +10,16 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        name="tumpangtanya.inforequest.acknowledgement_date"
+        title="AcknowledgementDate"
+        description="Date of acknowledgement for information request"
+        provides=".acknowledgement_date.IAcknowledgementDate"
+        factory=".acknowledgement_date.AcknowledgementDate"
+        marker=".acknowledgement_date.IAcknowledgementDateMarker"
+        />
+
+
+    <plone:behavior
         name="tumpangtanya.inforequest.response_date"
         title="ResponseDate"
         description="Response Date of Request by Government Agency"
