@@ -26,6 +26,15 @@ class GovernmentAgency(object):
         items = [
             VocabItem(u"ptg-sg", _(u"Pejabat Tanah dan Galian, Selangor")),
             VocabItem(u"ptg-pg", _(u"Pejabat Tanah dan Galian, Penang")),
+            VocabItem(u"suk-selangor", _(u"""Pejabat Setiausaha Kerajaan
+                Negeri Selangor""")),
+            VocabItem(u"suk-penang", _(u"""Pejabat Setiausaha Kerajaan
+                Negeri Penang""")),
+            VocabItem(u"kewangan-sg", _(u"""Jabatan Kewangan
+                Negeri Selangor""")),
+            VocabItem(u"kewangan-pg", _(u"""Jabatan Kewangan
+                Negeri Penang""")),
+
         ]
 
         # Fix context if you are using the vocabulary in DataGridField.

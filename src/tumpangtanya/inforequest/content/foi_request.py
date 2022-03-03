@@ -59,6 +59,7 @@ class IFoiRequest(model.Schema):
     )
 
     # Submission Documents
+    directives.order_after(submission_documents='ISubmissionDate.submission_date')
     directives.widget(
         "submission_documents",
         RelatedItemsFieldWidget,
@@ -84,6 +85,7 @@ class IFoiRequest(model.Schema):
     )
 
     # Requested Documents
+    directives.order_after(requested_documents='IResponseDate.response_date')
     directives.widget(
         "requested_documents",
         RelatedItemsFieldWidget,
@@ -94,10 +96,10 @@ class IFoiRequest(model.Schema):
     )
 
     requested_documents = RelationList(
-        title=u"Requsted Documents",
+        title=u"Requested Documents",
         description=_(
             u"""
-            Documents and information from successful request
+            Documents from successful request
             """
         ),
         default=[],
@@ -107,28 +109,9 @@ class IFoiRequest(model.Schema):
         required=False,
     )
 
-    # url = schema.URI(
-    #     title=_(u'Link'),
-    #     required=False
-    # )
 
-    # fieldset('Images', fields=['logo', 'advertisement'])
-    # logo = namedfile.NamedBlobImage(
-    #     title=_(u'Logo'),
-    #     required=False,
-    # )
 
-    # advertisement = namedfile.NamedBlobImage(
-    #     title=_(u'Advertisement (Gold-sponsors and above)'),
-    #     required=False,
-    # )
 
-    # directives.read_permission(notes='cmf.ManagePortal')
-    # directives.write_permission(notes='cmf.ManagePortal')
-    # notes = RichText(
-    #     title=_(u'Secret Notes (only for site-admins)'),
-    #     required=False
-    # )
 
 
 @implementer(IFoiRequest)

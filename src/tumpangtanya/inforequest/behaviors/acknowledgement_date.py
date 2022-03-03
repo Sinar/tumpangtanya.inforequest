@@ -18,12 +18,10 @@ class IAcknowledgementDateMarker(Interface):
 class IAcknowledgementDate(model.Schema):
     """ """
 
-    project = schema.TextLine(
-        title=_(u"Project"),
-        description=_(u"Give in a project name"),
+    acknowledgement_date_date = schema.Date(
+        title=_(u"Date when request was acknowledged as received."),
         required=False,
     )
-
 
 @implementer(IAcknowledgementDate)
 @adapter(IAcknowledgementDateMarker)
@@ -32,11 +30,11 @@ class AcknowledgementDate(object):
         self.context = context
 
     @property
-    def project(self):
-        if safe_hasattr(self.context, "project"):
-            return self.context.project
+    def acknowledgement_date(self):
+        if safe_hasattr(self.context, "acknowledgement_date"):
+            return self.context.acknowledgement_date
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @acknowledgement_date.setter
+    def acknowledgement_date(self, value):
+        self.context.acknowledgement_date = value

@@ -47,6 +47,10 @@
     <element value="plone.categorization"/>
     <element value="plone.basic"/>
     <element value="plone.locking" />
+    <element value="tumpangtanya.inforequest.response_date" />
+    <element value="tumpangtanya.inforequest.submission_date" />
+    <element value="tumpangtanya.inforequest.acknowledgement_date" />
+    <element value="tumpangtanya.inforequest.government_agency" />
     <!--<element value="plone.leadimage"/>-->
     <!--<element value="plone.relateditems"/>-->
     <!--<element value="plone.richtext"/>-->
