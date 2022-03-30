@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from plone import schema
+from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
+from plone.supermodel.directives import fieldset
+from plone.supermodel.directives import primary
 from Products.CMFPlone.utils import safe_hasattr
 from zope.component import adapter
 from zope.interface import Interface, implementer, provider
@@ -18,9 +21,19 @@ class IInforequestCostMarker(Interface):
 class IInforequestCost(model.Schema):
     """ """
 
-    project = schema.TextLine(
-        title=_(u"Project"),
-        description=_(u"Give in a project name"),
+    directives.order_after(submission_cost="ISubmissionDate.submission_date")
+    submission_cost = schema.Decimal(
+        title=_(u"Submission Cost"),
+        description=_(u'''Cost for submitting or filing an information
+            request.'''),
+        required=False,
+    )
+
+    directives.order_after(response_cost="IResponseDate.response_date")
+    response_cost = schema.Decimal(
+        title=_(u"Response Cost"),
+        description=_(u'''Cost for getting response for information request such as
+        printing, CD or other related costs.'''),
         required=False,
     )
 
@@ -32,11 +45,21 @@ class InforequestCost(object):
         self.context = context
 
     @property
-    def project(self):
-        if safe_hasattr(self.context, "project"):
-            return self.context.project
+    def submission_cost(self):
+        if safe_hasattr(self.context, "submission_cost"):
+            return self.context.submission_cost
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @submission_cost.setter
+    def submission_cost(self, value):
+        self.context.submission_cost = value
+
+    @property
+    def response_cost(self):
+        if safe_hasattr(self.context, "response_cost"):
+            return self.context.response_cost
+        return None
+
+    @response_cost.setter
+    def response_cost(self, value):
+        self.context.response_cost = value

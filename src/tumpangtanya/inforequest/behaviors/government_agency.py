@@ -5,6 +5,8 @@ from plone.app.z3cform.widget import RelatedItemsFieldWidget, SelectFieldWidget
 from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
+from plone.supermodel.directives import fieldset
+from plone.supermodel.directives import primary
 from Products.CMFPlone.utils import safe_hasattr
 from zope.component import adapter
 from zope.interface import Interface, implementer, provider
@@ -21,6 +23,8 @@ class IGovernmentAgency(model.Schema):
     """ """
 
     directives.widget(government_agency=SelectFieldWidget)
+    directives.order_after(government_agency='IFoiRequest.detail')
+    directives.order_after(government_agency='IInfoRequest.detail')
     government_agency = schema.Choice(
         title=_(u"Government Agency"),
         description=_(

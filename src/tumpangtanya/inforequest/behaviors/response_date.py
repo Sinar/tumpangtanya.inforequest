@@ -20,8 +20,7 @@ class IResponseDate(model.Schema):
     """ """
 
     # response date
-    directives.order_after(response_date="IFoiRequest.submission_documents")
-    directives.order_after(response_date="IInfoRequest.submission_documents")
+    directives.order_after(response_date="IInforequestCost.submission_cost")
     response_date = schema.Date(
         title=_(u"Date when requests responded to by government agency"),
         required=False,

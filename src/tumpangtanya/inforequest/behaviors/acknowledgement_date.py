@@ -1,28 +1,29 @@
 # -*- coding: utf-8 -*-
 
 from plone import schema
+from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
+from plone.supermodel.directives import fieldset
+from plone.supermodel.directives import primary
 from Products.CMFPlone.utils import safe_hasattr
 from zope.component import adapter
 from zope.interface import Interface, implementer, provider
 
 from tumpangtanya.inforequest import _
 
-
 class IAcknowledgementDateMarker(Interface):
     pass
-
 
 @provider(IFormFieldProvider)
 class IAcknowledgementDate(model.Schema):
     """ """
 
+    directives.order_after(acknowledgement_date_date='IInforequestCost.submission_cost')
     acknowledgement_date_date = schema.Date(
         title=_(u"Date when request was acknowledged as received."),
         required=False,
     )
-
 
 @implementer(IAcknowledgementDate)
 @adapter(IAcknowledgementDateMarker)
