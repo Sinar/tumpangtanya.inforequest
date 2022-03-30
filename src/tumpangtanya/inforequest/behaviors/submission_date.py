@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from plone import schema
-from plone.autoform.interfaces import IFormFieldProvider
 from plone.autoform import directives
+from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
 from Products.CMFPlone.utils import safe_hasattr
 from zope.component import adapter

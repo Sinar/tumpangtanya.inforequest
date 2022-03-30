@@ -10,6 +10,16 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        name="tumpangtanya.inforequest.inforequest_cost"
+        title="InforequestCost"
+        description="Provides costs for applicaiton and response of information requests"
+        provides=".inforequest_cost.IInforequestCost"
+        factory=".inforequest_cost.InforequestCost"
+        marker=".inforequest_cost.IInforequestCostMarker"
+        />
+
+
+    <plone:behavior
         name="tumpangtanya.inforequest.acknowledgement_date"
         title="AcknowledgementDate"
         description="Date of acknowledgement for information request"

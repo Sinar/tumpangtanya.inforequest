@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from plone.app.textfield import RichText
-from plone.autoform import directives
-from plone.dexterity.content import Container
 from plone.app.vocabularies.catalog import CatalogSource
 from plone.app.z3cform.widget import RelatedItemsFieldWidget
+from plone.autoform import directives
+from plone.dexterity.content import Container
 
 # from plone.namedfile import field as namedfile
 from plone.supermodel import model
@@ -99,6 +99,7 @@ class IInfoRequest(model.Schema):
         ),
         required=False,
     )
+
 
 @implementer(IInfoRequest)
 class InfoRequest(Container):

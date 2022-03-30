@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from plone import schema
-from plone.autoform.interfaces import IFormFieldProvider
 from plone.autoform import directives
+from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
 from Products.CMFPlone.utils import safe_hasattr
 from zope.component import adapter
@@ -20,8 +20,8 @@ class IResponseDate(model.Schema):
     """ """
 
     # response date
-    directives.order_after(response_date='IFoiRequest.submission_documents')
-    directives.order_after(response_date='IInfoRequest.submission_documents')
+    directives.order_after(response_date="IFoiRequest.submission_documents")
+    directives.order_after(response_date="IInfoRequest.submission_documents")
     response_date = schema.Date(
         title=_(u"Date when requests responded to by government agency"),
         required=False,

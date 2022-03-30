@@ -23,6 +23,7 @@ class IAcknowledgementDate(model.Schema):
         required=False,
     )
 
+
 @implementer(IAcknowledgementDate)
 @adapter(IAcknowledgementDateMarker)
 class AcknowledgementDate(object):

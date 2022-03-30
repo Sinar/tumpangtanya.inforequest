@@ -59,7 +59,7 @@ class IFoiRequest(model.Schema):
     )
 
     # Submission Documents
-    directives.order_after(submission_documents='ISubmissionDate.submission_date')
+    directives.order_after(submission_documents="ISubmissionDate.submission_date")
     directives.widget(
         "submission_documents",
         RelatedItemsFieldWidget,
@@ -85,7 +85,7 @@ class IFoiRequest(model.Schema):
     )
 
     # Requested Documents
-    directives.order_after(requested_documents='IResponseDate.response_date')
+    directives.order_after(requested_documents="IResponseDate.response_date")
     directives.widget(
         "requested_documents",
         RelatedItemsFieldWidget,
@@ -108,10 +108,6 @@ class IFoiRequest(model.Schema):
         ),
         required=False,
     )
-
-
-
-
 
 
 @implementer(IFoiRequest)
