@@ -36,7 +36,6 @@ class IGovernmentAgency(model.Schema):
         vocabulary="tumpangtanya.inforequest.GovernmentAgency",
     )
 
-
 @implementer(IGovernmentAgency)
 @adapter(IGovernmentAgencyMarker)
 class GovernmentAgency(object):

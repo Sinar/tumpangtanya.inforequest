@@ -25,7 +25,12 @@ class GovernmentAgency(object):
         # this can be any static or dynamic data, a catalog result for example.
         items = [
             VocabItem(u"ptg-sg", _(u"Pejabat Tanah dan Galian, Selangor")),
+            VocabItem(u"jabatan-hutan-selangor", _(u"Jabatan Hutan Negeri Selangor")),
+            VocabItem(u"jais", _(u"Jabatan Agama Islam Selangor")),
             VocabItem(u"ptg-pg", _(u"Pejabat Tanah dan Galian, Penang")),
+            VocabItem(u"mbpj", _(u"Majlis Bandaraya Petaling Jaya")),
+            VocabItem(u"mbsj", _(u"Majlis Bandaraya Subang Jaya")),
+            VocabItem(u"mbsp", _(u"Majlis Perbandaran Seberang Perai")),
             VocabItem(
                 u"suk-selangor",
                 _(
