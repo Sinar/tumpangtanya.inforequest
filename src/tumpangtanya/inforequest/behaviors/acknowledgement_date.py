@@ -4,13 +4,13 @@ from plone import schema
 from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
-from plone.supermodel.directives import fieldset
-from plone.supermodel.directives import primary
+from plone.supermodel.directives import fieldset, primary
 from Products.CMFPlone.utils import safe_hasattr
 from zope.component import adapter
 from zope.interface import Interface, implementer, provider
 
 from tumpangtanya.inforequest import _
+
 
 class IAcknowledgementDateMarker(Interface):
     pass
