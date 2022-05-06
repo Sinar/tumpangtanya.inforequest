@@ -19,8 +19,8 @@ class IAcknowledgementDateMarker(Interface):
 class IAcknowledgementDate(model.Schema):
     """ """
 
-    directives.order_after(acknowledgement_date_date='IInforequestCost.submission_cost')
-    acknowledgement_date_date = schema.Date(
+    directives.order_after(acknowledgement_date='IInforequestCost.submission_cost')
+    acknowledgement_date = schema.Date(
         title=_(u"Date when request was acknowledged as received."),
         required=False,
     )
