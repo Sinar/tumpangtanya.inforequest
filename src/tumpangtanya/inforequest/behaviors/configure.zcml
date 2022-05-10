@@ -48,15 +48,4 @@
         marker=".submission_date.ISubmissionDateMarker"
         />
 
-
-    <plone:behavior
-        name="tumpangtanya.inforequest.government_agency"
-        title="GovernmentAgency"
-        description="Government Agency request as made to"
-        provides=".government_agency.IGovernmentAgency"
-        factory=".government_agency.GovernmentAgency"
-        marker=".government_agency.IGovernmentAgencyMarker"
-        />
-
-
 </configure>
