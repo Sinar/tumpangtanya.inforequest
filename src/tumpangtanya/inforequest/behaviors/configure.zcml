@@ -10,6 +10,16 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <plone:behavior
+        name="tumpangtanya.inforequest.government_agency_info_request"
+        title="GovernmentAgencyInfoRequest"
+        description="Government Agency an Information Request was made to"
+        provides=".government_agency_info_request.IGovernmentAgencyInfoRequest"
+        factory=".government_agency_info_request.GovernmentAgencyInfoRequest"
+        marker=".government_agency_info_request.IGovernmentAgencyInfoRequestMarker"
+        />
+
+
+    <plone:behavior
         name="tumpangtanya.inforequest.inforequest_cost"
         title="InforequestCost"
         description="Provides costs for applicaiton and response of information requests"
